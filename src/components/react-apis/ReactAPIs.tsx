@@ -1,6 +1,7 @@
 // import { useId } from "react";
 // import useFetch from "../hooks/useFetch";
 import ContextData from "./ContextData";
+import ContextDataView from "./ContextDataView";
 import MyContextProvider from "./MyContextProvider";
 
 
@@ -19,6 +20,7 @@ const ReactAPIs = () => {
   return <MyContextProvider>
     <>
       <ContextData />
+      <ContextDataView />
     </>
   </MyContextProvider>
 };

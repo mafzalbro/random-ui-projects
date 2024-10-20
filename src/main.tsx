@@ -13,6 +13,10 @@ import ThreeDEffectSwiper from './components/swiper/ThreeDEffectSwiper.tsx'
 import ThreeDEffectSwiper2 from './components/swiper/ThreeDEffectSwiper2.tsx'
 import ThreeDEffectSwiperFramer from './components/swiper/ThreeDEffectSwiper3.tsx'
 import ScrollCards from './components/framer/ScrollCards.tsx'
+import ImageUploadGallery from './components/ImageUploadGallery.tsx'
+
+
+document.title = 'Random UI Practices'
 
 const router = createBrowserRouter([
   {
@@ -55,6 +59,11 @@ const router = createBrowserRouter([
       {
         path: "/3d-swiper",
         element: <><Nav /><ThreeDEffectSwiper /><ThreeDEffectSwiper2 /><ThreeDEffectSwiperFramer /></>,
+        // loader: teamLoader,
+      },
+      {
+        path: "/gallery",
+        element: <><Nav /><ImageUploadGallery /></>,
         // loader: teamLoader,
       },
     ],

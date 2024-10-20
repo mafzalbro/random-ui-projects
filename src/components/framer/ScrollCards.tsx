@@ -28,8 +28,32 @@ const cardsData = [
         body: { title: 'Card 5', description: 'Description 5', price: '$500', img: '/profile.png' },
         bgColor: 'bg-purple-500',
     },
+    {
+        id: 6,
+        body: { title: 'Card 6', description: 'Description 6', price: '$600', img: '/profile.png' },
+        bgColor: 'bg-pink-500',
+    },
+    {
+        id: 7,
+        body: { title: 'Card 7', description: 'Description 7', price: '$700', img: '/profile.png' },
+        bgColor: 'bg-indigo-500',
+    },
+    {
+        id: 8,
+        body: { title: 'Card 8', description: 'Description 8', price: '$800', img: '/profile.png' },
+        bgColor: 'bg-teal-500',
+    },
+    {
+        id: 9,
+        body: { title: 'Card 9', description: 'Description 9', price: '$900', img: '/profile.png' },
+        bgColor: 'bg-orange-500',
+    },
+    {
+        id: 10,
+        body: { title: 'Card 10', description: 'Description 10', price: '$1000', img: '/profile.png' },
+        bgColor: 'bg-gray-500',
+    },
 ];
-
 const ScrollCards: React.FC = () => {
     // This will track the scroll progress of the entire window
     const { scrollYProgress } = useScroll();
@@ -48,7 +72,7 @@ const ScrollCards: React.FC = () => {
     });
 
     return (
-        <div className="relative h-[1000vh] flex flex-col items-center"> {/* Adjust height for scrolling */}
+        <div className={`relative h-[${cardsData.length}00vh] flex flex-col items-center`}> {/* Adjust height for scrolling */}
             {/* Render each card from the JSON data dynamically */}
             {cardsData.map((card, index) => (
                 <motion.div
@@ -56,7 +80,7 @@ const ScrollCards: React.FC = () => {
                     className={`card ${card.bgColor} h-[100vh] w-full text-center text-white p-10 shadow-xl rounded-lg flex items-center justify-center`}
                     style={{
                         scale: cardTransforms[index].scale,
-                        opacity: cardTransforms[index].opacity,
+                        // opacity: cardTransforms[index].opacity,
                         position: 'absolute', // Ensure that only the active card is fixed
                         top: `${index * 100}vh` // Position cards on different sections of the viewport
                     }}

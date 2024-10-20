@@ -47,6 +47,11 @@ const Nav: FC = () => {
             link: '/3d-swiper',
             name: '3D Swiper'
         },
+        {
+            key: 'gallery',
+            link: '/gallery',
+            name: 'Image Gallery'
+        },
     ]
     const { pathname } = useLocation()
     return (
