@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Regular";
+  src: local("Outfit-Regular"),
+    url("./fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: "Regular";
+}
+
+body {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  overflow-x: hidden;
+}
