@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from "react";
+import { CSSProperties, FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { BsPlus, BsX, BsCloudUpload, BsDownload } from "react-icons/bs";
+import { BsX, BsCloudUpload, BsDownload } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
 
 interface ImageFile {
@@ -8,7 +8,7 @@ interface ImageFile {
     src: string;
 }
 
-const dottedBoxStyle = {
+const dottedBoxStyle: CSSProperties = {
     border: "2px dashed #ccc",
     borderRadius: "10px",
     padding: "20px",
@@ -32,7 +32,7 @@ const ImageUploadGallery: FC = () => {
 
 
     useEffect(() => {
-        const imgs: string = localStorage.getItem('images')
+        const imgs = localStorage.getItem('images')
         if (imgs) {
             const parsedImages = JSON.parse(imgs)
             setUploadedImages(() => parsedImages)
